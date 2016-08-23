@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Linq;
 using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model.Models
+namespace KamikazeChicken.Model.Models
 {
     [Table("Products")]
     public class Product : Auditable

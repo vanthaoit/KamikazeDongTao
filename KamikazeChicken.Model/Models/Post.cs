@@ -2,7 +2,7 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using TeduShop.Model.Abstract;
 
-namespace TeduShop.Model.Models
+namespace KamikazeChicken.Model.Models
 {
     [Table("Posts")]
     public class Post : Auditable
