@@ -12,6 +12,7 @@ namespace KamikazeChicken.Web.Controllers
         public ActionResult Index()
         {
             // command this time
+
             return View();
         }
 
