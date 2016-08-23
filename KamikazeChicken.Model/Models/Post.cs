@@ -33,6 +33,7 @@ namespace KamikazeChicken.Model.Models
 
         public bool? HomeFlag { set; get; }
         public bool? HotFlag { set; get; }
+
         public int? ViewCount { set; get; }
 
         [ForeignKey("CategoryID")]
