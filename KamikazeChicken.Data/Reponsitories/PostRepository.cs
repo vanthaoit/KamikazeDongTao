@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using KamikazeChicken.Data.Infrastructure;
+﻿using KamikazeChicken.Data.Infrastructure;
 using KamikazeChicken.Model.Models;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace KamikazeChicken.Data.Repositories
