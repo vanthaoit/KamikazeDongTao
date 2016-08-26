@@ -57,9 +57,9 @@
     <Compile Include="Infrastructure\RepositoryBase.cs" />
     <Compile Include="Infrastructure\UnitOfWork.cs" />
     <Compile Include="KamikazeChickenDbContext.cs" />
-    <Compile Include="Migrations\201608240501218_initialDB.cs" />
-    <Compile Include="Migrations\201608240501218_initialDB.Designer.cs">
-      <DependentUpon>201608240501218_initialDB.cs</DependentUpon>
+    <Compile Include="Migrations\201608260433219_initialDB.cs" />
+    <Compile Include="Migrations\201608260433219_initialDB.Designer.cs">
+      <DependentUpon>201608260433219_initialDB.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -97,8 +97,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201608240501218_initialDB.resx">
-      <DependentUpon>201608240501218_initialDB.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201608260433219_initialDB.resx">
+      <DependentUpon>201608260433219_initialDB.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

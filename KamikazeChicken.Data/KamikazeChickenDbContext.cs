@@ -1,16 +1,11 @@
 ﻿using KamikazeChicken.Model.Models;
-using System;
-using System.Collections.Generic;
 using System.Data.Entity;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace KamikazeChicken.Data
 {
-    public class KamikazeChickenDbContext: DbContext
+    public class KamikazeChickenDbContext : DbContext
     {
-        public KamikazeChickenDbContext(): base("KamikazeChickenConnection")
+        public KamikazeChickenDbContext() : base("KamikazeChickenConnection")
         {
             this.Configuration.LazyLoadingEnabled = false;
         }
@@ -33,11 +28,9 @@ namespace KamikazeChicken.Data
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
 
-        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        protected override void OnModelCreating(DbModelBuilder builder)
         {
-            
+
         }
-
-
     }
 }

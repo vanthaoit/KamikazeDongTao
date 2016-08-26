@@ -13,7 +13,7 @@ namespace KamikazeChicken.Data.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201608240501218_initialDB"; }
+            get { return "201608260433219_initialDB"; }
         }
         
         string IMigrationMetadata.Source

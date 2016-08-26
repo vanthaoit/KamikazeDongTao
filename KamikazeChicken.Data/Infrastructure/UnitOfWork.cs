@@ -1,18 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace KamikazeChicken.Data.Infrastructure
+﻿namespace KamikazeChicken.Data.Infrastructure
 {
-    public class UnitOfWork: IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly IDbFactory dbFactory;
         private KamikazeChickenDbContext dbContext;
 
         public UnitOfWork(IDbFactory dbFactory)
-        {
+        {   
             this.dbFactory = dbFactory;
         }
 
