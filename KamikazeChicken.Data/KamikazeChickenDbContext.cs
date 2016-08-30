@@ -1,9 +1,10 @@
 ﻿using KamikazeChicken.Model.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 using System.Data.Entity;
 
 namespace KamikazeChicken.Data
 {
-    public class KamikazeChickenDbContext : DbContext
+    public class KamikazeChickenDbContext : IdentityDbContext<ApplicationUser>
     {
         public KamikazeChickenDbContext() : base("KamikazeChickenConnection")
         {
@@ -27,10 +28,19 @@ namespace KamikazeChicken.Data
         public DbSet<SystemConfig> SystemConfigs { set; get; }
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
+        public DbSet<Error> Erros { set; get; }
 
         protected override void OnModelCreating(DbModelBuilder builder)
         {
+            builder.Entity<IdentityUserRole>().HasKey(x=>new { x.UserId,x.RoleId });
+            builder.Entity<IdentityUserLogin>().HasKey(x => x.UserId);
 
+
+        }
+
+        public static KamikazeChickenDbContext Create()
+        {
+            return new KamikazeChickenDbContext();
         }
     }
 }
