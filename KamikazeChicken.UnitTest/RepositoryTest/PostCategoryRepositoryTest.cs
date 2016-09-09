@@ -40,7 +40,7 @@ namespace KamikazeChicken.UnitTest.RepositoryTest
             unitOfWork.Commit();
 
             Assert.IsNotNull(result);
-            Assert.AreEqual(6, result.ID);
+            Assert.AreEqual(9, result.ID);
         }
     }
 }

@@ -33,7 +33,7 @@ namespace KamikazeChicken.UnitTest.ServiceTest
 
             _postCategory = new PostCategory()
             {
-                ID = 1,
+                ID = 9,
                 Name = "PC1",
                 Alias = "post-category",
                 Status = true
@@ -65,7 +65,7 @@ namespace KamikazeChicken.UnitTest.ServiceTest
             // call action
             var result = _postCategoryService.Add(_postCategory);
             Assert.IsNotNull(result);
-            Assert.AreEqual(1, result.ID);
+            Assert.AreEqual(9, result.ID);
 
         }
     }

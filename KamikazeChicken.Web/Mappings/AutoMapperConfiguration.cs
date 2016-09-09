@@ -10,8 +10,13 @@ namespace KamikazeChicken.Web.Mappings
         {
             Mapper.CreateMap<PostCategory, PostCategoryViewModel>();
             Mapper.CreateMap<Post, PostViewModel>();
-            Mapper.CreateMap<Tag, TagViewModel>();
             Mapper.CreateMap<PostTag, PostTagViewModel>();
+
+            Mapper.CreateMap<Tag, TagViewModel>();
+            
+            Mapper.CreateMap<ProductCategory, ProductCategoryViewModel>();
+            Mapper.CreateMap<Product, ProductCategoryViewModel>();
+            Mapper.CreateMap<ProductTag, ProductTagViewModel>();
         }
     }
 }
