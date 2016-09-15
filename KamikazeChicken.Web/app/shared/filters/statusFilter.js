@@ -4,7 +4,7 @@
             if (input == true)
                 return 'Kích hoạt';
             else
-                return 'Đã Khóa';
+                return 'Đã khóa';
         }
     });
 })(angular.module('kamikazeChicken.common'));

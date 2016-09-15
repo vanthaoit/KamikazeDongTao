@@ -1,3 +1,3 @@
 ﻿(function () {
-    angular.module('kamikazeChicken.common', ['ui.router'])
+    angular.module('kamikazeChicken.common', ['ui.router', 'ngBootbox', 'ngCkeditor'])
 })();
