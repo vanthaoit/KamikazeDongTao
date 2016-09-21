@@ -20,20 +20,26 @@
 
         function deleteMulti() {
             var listId = [];
+            var count = 0;
             $.each($scope.selected, function (i, item) {
+                count = count + 1;
                 listId.push(item.ID);
             });
-            var config = {
-                params: {
-                    checkedProducts: JSON.stringify(listId)
+            $ngBootbox.confirm('Bạn có chắc muốn xóa '+ count +' bản ghi đã được chọn ?').then(function () {
+
+                var config = {
+                    params: {
+                        checkedProducts: JSON.stringify(listId)
+                    }
                 }
-            }
-            apiService.del('api/product/deletemulti', config, function (result) {
-                notificationService.displaySuccess('Xóa thành công ' + result.data + ' bản ghi.');
-                search();
-            }, function (error) {
-                notificationService.displayError('Xóa không thành công');
+                apiService.del('api/product/deletemulti', config, function (result) {
+                    notificationService.displaySuccess('Xóa thành công ' + result.data + ' bản ghi.');
+                    search();
+                }, function (error) {
+                    notificationService.displayError('Xóa không thành công');
+                });
             });
+            
         }
 
         $scope.isAll = false;
@@ -61,18 +67,18 @@
             }
         }, true);
 
-        function deleteProduct(id) {
-            $ngBootbox.confirm('Bạn có chắc muốn xóa?').then(function () {
+        function deleteProduct(id,name) {
+            $ngBootbox.confirm('Bạn có chắc muốn xóa ' +'"'+ name+'"?' ).then(function () {
                 var config = {
                     params: {
                         id: id
                     }
                 }
-                apiService.del('api/product/delete', config, function () {
-                    notificationService.displaySuccess('Xóa thành công');
+                apiService.del('api/product/delete', config, function (result) {
+                    notificationService.displaySuccess('Xóa thành công ' +'"' + result.data.Name + '"');
                     search();
                 }, function () {
-                    notificationService.displayError('Xóa không thành công');
+                    notificationService.displayError('Xóa không thành công ' + '"' + result.data.Name + '"');
                 })
             });
         }
@@ -96,7 +102,7 @@
                 }
                 $scope.products = result.data.Items;
                 $scope.page = result.data.Page;
-                $scope.pagesCount = result.data.TotalPages;
+                $scope.totalPages = result.data.TotalPages;
                 $scope.totalCount = result.data.TotalCount;
             }, function () {
                 console.log('Load product failed.');

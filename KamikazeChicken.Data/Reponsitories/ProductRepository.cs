@@ -3,7 +3,7 @@ using KamikazeChicken.Model.Models;
 
 namespace KamikazeChicken.Data.Reponsitories
 {
-    public interface IProductRepository
+    public interface IProductRepository : IRepository<Product>
     {
     }
 

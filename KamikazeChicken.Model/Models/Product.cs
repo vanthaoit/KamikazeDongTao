@@ -1,7 +1,6 @@
 ﻿using KamikazeChicken.Model.Abstract;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Xml.Linq;
 
 namespace KamikazeChicken.Model.Models
 {
@@ -26,11 +25,13 @@ namespace KamikazeChicken.Model.Models
         [MaxLength(256)]
         public string Image { set; get; }
 
-        [Column(TypeName ="xml")]
+        [Column(TypeName = "xml")]
         public string MoreImages { set; get; }
+
         public decimal Price { set; get; }
 
         public decimal? PromotionPrice { set; get; }
+
         public int? Warranty { set; get; }
 
         [MaxLength(500)]
@@ -39,10 +40,12 @@ namespace KamikazeChicken.Model.Models
         public string Content { set; get; }
 
         public bool? HomeFlag { set; get; }
-        public bool? HotFlag { set; get; }
-        public int? ViewCount { set; get; }
-       
 
+        public bool? HotFlag { set; get; }
+
+        public int? ViewCount { set; get; }
+
+        public string Tags { set; get; }
 
         [ForeignKey("CategoryID")]
         public virtual ProductCategory ProductCategory { set; get; }

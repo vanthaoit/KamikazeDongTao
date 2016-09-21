@@ -81,6 +81,10 @@
     <Compile Include="Migrations\201608301457316_Changkey.Designer.cs">
       <DependentUpon>201608301457316_Changkey.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609160643558_AddTagField.cs" />
+    <Compile Include="Migrations\201609160643558_AddTagField.Designer.cs">
+      <DependentUpon>201609160643558_AddTagField.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reponsitories\ErrorRepository.cs" />
@@ -128,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201608301457316_Changkey.resx">
       <DependentUpon>201608301457316_Changkey.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609160643558_AddTagField.resx">
+      <DependentUpon>201609160643558_AddTagField.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
