@@ -85,9 +85,27 @@
     <Compile Include="Migrations\201609160643558_AddTagField.Designer.cs">
       <DependentUpon>201609160643558_AddTagField.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201609220822288_AddContentToSlide.cs" />
+    <Compile Include="Migrations\201609220822288_AddContentToSlide.Designer.cs">
+      <DependentUpon>201609220822288_AddContentToSlide.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609241037378_AddQuantityToProduct.cs" />
+    <Compile Include="Migrations\201609241037378_AddQuantityToProduct.Designer.cs">
+      <DependentUpon>201609241037378_AddQuantityToProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609291005333_AddContactDetail.cs" />
+    <Compile Include="Migrations\201609291005333_AddContactDetail.Designer.cs">
+      <DependentUpon>201609291005333_AddContactDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201609301436087_Feedback.cs" />
+    <Compile Include="Migrations\201609301436087_Feedback.Designer.cs">
+      <DependentUpon>201609301436087_Feedback.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reponsitories\ContactDetailRepository.cs" />
     <Compile Include="Reponsitories\ErrorRepository.cs" />
+    <Compile Include="Reponsitories\FeedbackRepository.cs" />
     <Compile Include="Reponsitories\FooterRepository.cs" />
     <Compile Include="Reponsitories\MenuGroupRepository.cs" />
     <Compile Include="Reponsitories\MenuRepository.cs" />
@@ -135,6 +153,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201609160643558_AddTagField.resx">
       <DependentUpon>201609160643558_AddTagField.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609220822288_AddContentToSlide.resx">
+      <DependentUpon>201609220822288_AddContentToSlide.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609241037378_AddQuantityToProduct.resx">
+      <DependentUpon>201609241037378_AddQuantityToProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609291005333_AddContactDetail.resx">
+      <DependentUpon>201609291005333_AddContactDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201609301436087_Feedback.resx">
+      <DependentUpon>201609301436087_Feedback.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

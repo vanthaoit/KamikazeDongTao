@@ -29,6 +29,8 @@ namespace KamikazeChicken.Data
         public DbSet<Tag> Tags { set; get; }
         public DbSet<VisitorStatistic> VisitorStatistics { set; get; }
         public DbSet<Error> Erros { set; get; }
+        public DbSet<ContactDetail> ContactDetails { set; get; }
+        public DbSet<Feedback> feedbacks { set; get; }
 
         protected override void OnModelCreating(DbModelBuilder builder)
         {

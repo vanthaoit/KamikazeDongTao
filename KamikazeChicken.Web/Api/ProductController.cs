@@ -15,7 +15,7 @@ using System.Web.Script.Serialization;
 namespace KamikazeChicken.Web.Api
 {
     [RoutePrefix("api/product")]
-    [Authorize]
+   [Authorize]
     public class ProductController : ApiControllerBase
     {
         #region Initialize

@@ -1,5 +1,6 @@
 ﻿using KamikazeChicken.Model.Models;
 using KamikazeChicken.Web.Models;
+using System;
 
 namespace KamikazeChicken.Web.Infrastructure.Extensions
 {
@@ -15,7 +16,7 @@ namespace KamikazeChicken.Web.Infrastructure.Extensions
             postCategory.DisplayOrder = postCategoryVm.DisplayOrder;
             postCategory.Image = postCategoryVm.Image;
             postCategory.HomeFlag = postCategoryVm.HomeFlag;
-
+            
             postCategory.CreatedDate = postCategoryVm.CreatedDate;
             postCategory.CreatedBy = postCategoryVm.CreatedBy;
             postCategory.UpdatedDate = postCategoryVm.UpdatedDate;
@@ -35,6 +36,7 @@ namespace KamikazeChicken.Web.Infrastructure.Extensions
             productCategory.DisplayOrder = productCategoryVm.DisplayOrder;
             productCategory.Image = productCategoryVm.Image;
             productCategory.HomeFlag = productCategoryVm.HomeFlag;
+            
 
             productCategory.CreatedDate = productCategoryVm.CreatedDate;
             productCategory.CreatedBy = productCategoryVm.CreatedBy;
@@ -55,6 +57,7 @@ namespace KamikazeChicken.Web.Infrastructure.Extensions
             post.Content = postVm.Content;
             post.Image = postVm.Image;
             post.HomeFlag = postVm.HomeFlag;
+            post.HotFlag = postVm.HotFlag;
             post.ViewCount = postVm.ViewCount;
 
             post.CreatedDate = postVm.CreatedDate;
@@ -80,6 +83,7 @@ namespace KamikazeChicken.Web.Infrastructure.Extensions
             product.PromotionPrice = productVm.PromotionPrice;
             product.Warranty = productVm.Warranty;
             product.HomeFlag = productVm.HomeFlag;
+            product.HotFlag = productVm.HotFlag;
             product.ViewCount = productVm.ViewCount;
 
             product.CreatedDate = productVm.CreatedDate;
@@ -90,6 +94,15 @@ namespace KamikazeChicken.Web.Infrastructure.Extensions
             product.MetaDescription = productVm.MetaDescription;
             product.Status = productVm.Status;
             product.Tags = productVm.Tags;
+            product.Quantity = productVm.Quantity;
+        }
+        public static void UpdateFeedback(this Feedback feedback,FeedbackViewModel feedbackViewModel)
+        {
+            feedback.Name = feedbackViewModel.Name;
+            feedback.Email = feedbackViewModel.Email;
+            feedback.Message = feedbackViewModel.Message;
+            feedback.Status = feedbackViewModel.Status;
+            feedback.CreatedDate = DateTime.Now;
         }
     }
 }
